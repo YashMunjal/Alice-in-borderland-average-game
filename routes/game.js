@@ -12,9 +12,9 @@ router.get('/',(req,res)=>{
 
 router.post('/send-my-choice',(req,res)=>{
     
-    console.log(getRankOfPlayers())
+    var rankedPlayers=getRankOfPlayers(req)
     
-    res.send(`Your choice has been saved`)
+    res.json(rankedPlayers)
 })
 
 router.get('/see-results',(req,res)=>{
